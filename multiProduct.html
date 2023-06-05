@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script src="Homepage.js"></script>  <!--add the homepage.js for menu functionality -->
+</head>
+
+<body>
+    <header>
+        <div class="header-bar">
+            <a href="Homepage.html" class="home-link">
+            <div class="logo-content" i> <!--a is a bit flaky so try to link it via js-->
+                <img src="A3/Logo.png" alt="Logo" class="logo">
+                <p class="bookshop" id="bookshop-home">Robinson's Bookshop</p>
+            </div>
+            </a>
+            <div class="topnav">
+                <div class="search-bar">
+                     <div class="input-box-search">
+                            <input type="text" class="search" placeholder="Search" id="search" oninput="searchBar()"> <!--dropdownsearch-->
+                    </div>
+                             <button class="search-icon" id="search-button"> <img src="A3\search-icon.png" alt="search-icon" class="search-img"></button>
+                </div>
+                <div class="menu">
+                    <button class="menubutton" onclick="menuBar()"> <img src="A3\menu-icon.png" alt="menu-icon" class="menu-img"></button> <!--js for opening menu-->
+                    <button class="cartbutton" onclick="openCart()"> <img src="A3\cart-icon.png" alt="cart-icon" class="cart-img" ></button>
+                    <div id="cartNotif" class="notif">1</div>
+                </div>
+                <div class="search-drop" id="searchDrop">
+                    <div class="search-items">
+                        <div class="book-search">
+                            <a href="single-product-page.html" class="single-link">  
+                                <div class="search-img">
+                                    <img src="A3/wicked-king.jpg" alt="wicked-king" class="searchimg">
+                                </div>
+                                <div class="searchcontent">
+                                    <p class="search-title">The Wicked King</p>
+                                    <p class="search-author">Holly Black</p>
+                                    <p class="bestseller-search">#1 Bestseller</p>
+                                    <p class="search-price"> $11.69</p>
+                                    <p class="search-discount">$12.99</p>
+                                </div>
+                            </a>
+                        </div>
+                        <hr class="searchdiv">
+                        <div class="book-search">
+                            <div class="search-img">
+                                <img src="A3/modern-fae.jpg" alt="modern-fae" class="searchimg">
+                            </div>
+                            <div class="searchcontent">
+                                <p class="search-title">Book Title</p>
+                                <p class="search-author">Author</p>
+                                <p class="bestseller-search">#1 Bestseller</p>
+                                <p class="search-price"> Price</p>
+                                <p class="search-discount">discount</p>
+                            </div>
+                        </div>
+                        <hr class="searchdiv">
+                        <div class="book-search">
+                            <div class="search-img">
+                                <img src="A3/modern-fae.jpg" alt="modern-fae" class="searchimg">
+                            </div>
+                            <div class="searchcontent">
+                                <p class="search-title">Book Title</p>
+                                <p class="search-author">Author</p>
+                                <p class="bestseller-search">#1 Bestseller</p>
+                                <p class="search-price"> Price</p>
+                                <p class="search-discount">discount</p>
+                            </div>
+                        </div>
+                        <hr class="searchdiv">
+                        <div class="book-search">
+                            <a href="multiProduct.html">
+                            <div class="author-rec">
+                                <p class="author-text"> View more books by</p>
+                                <p class="author-name"><b>Holly Black</b></p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <div class="drop-down-menu" id="menuDrop">
+        <div class="menu-content menu-header">
+          <h4 class="menu-title">Menu</h4>
+        </div>
+
+          <div class="main-menu">
+              <hr>
+              <div class="menu-content">
+                <p class="subjects">Books</p> 
+                <img src="A3/right-arrow.png" alt="right-arrow" class="menu-arrow">
+              </div>
+              <hr>
+              <div class="menu-content">
+                <p class="subjects">Kids</p> 
+                <img src="A3/right-arrow.png" alt="right-arrow" class="menu-arrow">
+              </div>
+              <hr>
+              <div class="menu-content">
+                <p class="subjects">Sale</p> 
+                <img src="A3/right-arrow.png" alt="right-arrow" class="menu-arrow">
+              </div>
+              <hr>
+              <div class="menu-content">
+                <p class="subjects">Games & Toys</p> 
+                <img src="A3/right-arrow.png" alt="right-arrow" class="menu-arrow">
+              </div>
+              <hr>
+              <div class="menu-content">
+                <p class="subjects">Gifts, Stationery & More</p> 
+                <img src="A3/right-arrow.png" alt="right-arrow" class="menu-arrow">
+              </div>
+          </div>
+
+          <div class="sub-menu">
+            <div class="menu-content sub-content">
+              <p class="subjects small">Events</p> 
+              <img src="A3/right-arrow-white.png" alt="right-arrow-white" class="sub-arrow">
+            </div>
+              
+            <div class="menu-content sub-content">
+              <p class="subjects small">Book Club</p> 
+              <img src="A3/right-arrow-white.png" alt="right-arrow-white" class="sub-arrow">
+            </div>
+              
+            <div class="menu-content sub-content">
+              <p class="subjects small">Blog</p> 
+              <img src="A3/right-arrow-white.png" alt="right-arrow-white" class="sub-arrow">
+            </div>
+              
+            <div class="menu-content sub-content">
+              <p class="subjects small">Cafe</p> 
+              <img src="A3/right-arrow-white.png" alt="right-arrow-white" class="sub-arrow">
+            </div>
+             
+            <div class="menu-content sub-content">
+              <p class="subjects small">Membership</p> 
+              <img src="A3/right-arrow-white.png" alt="right-arrow-white" class="sub-arrow">
+            </div>
+              
+            <div class="menu-content sub-content">
+              <p class="subjects small">Locations</p> 
+              <img src="A3/right-arrow-white.png" alt="right-arrow-white" class="menu-arrow sub-arrow">
+            </div>
+             
+            <div class="menu-content sub-content">
+              <p class="subjects small">Contact Us</p> 
+              <img src="A3/right-arrow-white.png" alt="right-arrow-white" class="menu-arrow sub-arrow">
+            </div>
+             
+            <div class="menu-content sub-content">
+              <p class="subjects small">About Us</p> 
+              <img src="A3/right-arrow-white.png" alt="right-arrow-white" class="menu-arrow sub-arrow">
+            </div>
+          
+          <div class="copyright">
+              <p> Copyright 2000-2021 | All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-cart" id="sideBar">
+        <div class="pop-cart">
+          <div class="menu-content menu-header">
+            <h4 class="menu-title">My Shopping Cart</h4>
+          </div>
+          <div class="pop-ship">
+            <img src="A3/carbon_delivery-truck.png" alt="carbon_delivery-truck" class="free-truck">
+            <p class="popup-shipping">
+                Add <b> $63.41 </b> of items to be eligible for <b> free shipping </b>                         </p>
+        </div>
+        <div class="book-search  popcart-item"> 
+          <a href="single-product-page.html" class="single-link">  
+              <div class="search-img">
+                  <img src="A3/wicked-king.jpg" alt="wicked-king" class="searchimg pop-img">
+              </div>
+              <div class="searchcontent">
+                  <p class="search-title">The Wicked King</p>
+                  <p class="search-author">Holly Black</p>
+                  <p class="bestseller-search">#1 Bestseller</p>
+                  <p class="search-price"> $11.69</p>
+                  <p class="search-discount">$12.99</p>
+                  <p class="qty">Qty: 1</p>
+                  <p class="remove">X Remove</p>
+              </div>
+          </a>
+          </div>    
+          <div class="cart-bottom">
+            <hr class="searchdiv-bottom">
+              <div class="subtotal">
+                  <p class="sub-total">Sub Total</p>
+                  <p class="sub-pricing"><b>$11.69</b></p>
+              </div>
+            <span class="ship-info">*Shipping and taxes calculated at checkout</span>
+            
+            <button class="view-cart"> <a href="Cart.html">View Cart</a></button>
+          </div>
+      
+        </div>
+      </div>
+    <div class="bg" id="bg"></div>
+
+<div class="free-shipping">
+    <p class="content-free"  >
+        <img src="A3/carbon_delivery-truck.png" alt="carbon_delivery-truck" class="free-truck">
+        Free Shipping over $75
+    </p>
+</div>
+    <div class="navigation">
+        <p class="nav-past">Home</p>
+        <img src="A3/right-arrow-grey.png" alt="right-arrow-grey" class="nav-arrow"> 
+        <p class="nav-past">Search</p>
+        <img src="A3/right-arrow-grey.png" alt="right-arrow-grey" class="nav-arrow">                  
+        <p class="nav-location">Results</p>
+    </div>
+    <!--Individual product tile-->
+<section class="product-page">
+    <div class="header-container">
+        <div class="column-p search-num">
+          <p class="search-results">1-12 of 181 results</p>
+        </div>
+        <div class="column-p search-header">
+          <h1 style="text-align: center">Books by "Holy Black"</h1>
+        </div>
+        <div class="column-p layout-options">
+          <div class="layouts">
+            <img src="A3/grid-layout.png" alt="" class="layout-button">    
+            <img src="A3/list-layout.png" alt="" class="layout-button">
+          </div>
+          <div class="sort-show">
+            <div class="sort">
+              <img src="A3/sort.png" alt="">
+              Sort By 
+              <img src="A3/down-arrow.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div class = "container">
+    <div class = "left">
+        <div class = "filter">
+            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.375 1.66825C4.14294 1.66825 3.92038 1.75603 3.75628 1.91227C3.59219 2.0685 3.5 2.28041 3.5 2.50136C3.5 2.72231 3.59219 2.93422 3.75628 3.09046C3.92038 3.24669 4.14294 3.33447 4.375 3.33447C4.60706 3.33447 4.82962 3.24669 4.99372 3.09046C5.15781 2.93422 5.25 2.72231 5.25 2.50136C5.25 2.28041 5.15781 2.0685 4.99372 1.91227C4.82962 1.75603 4.60706 1.66825 4.375 1.66825ZM1.89875 1.66825C2.07953 1.18044 2.41477 0.75803 2.85827 0.459242C3.30178 0.160453 3.8317 0 4.375 0C4.9183 0 5.44822 0.160453 5.89173 0.459242C6.33523 0.75803 6.67047 1.18044 6.85125 1.66825H13.125C13.3571 1.66825 13.5796 1.75603 13.7437 1.91227C13.9078 2.0685 14 2.28041 14 2.50136C14 2.72231 13.9078 2.93422 13.7437 3.09046C13.5796 3.24669 13.3571 3.33447 13.125 3.33447H6.85125C6.67047 3.82228 6.33523 4.24469 5.89173 4.54348C5.44822 4.84227 4.9183 5.00272 4.375 5.00272C3.8317 5.00272 3.30178 4.84227 2.85827 4.54348C2.41477 4.24469 2.07953 3.82228 1.89875 3.33447H0.875C0.642936 3.33447 0.420376 3.24669 0.256282 3.09046C0.0921874 2.93422 0 2.72231 0 2.50136C0 2.28041 0.0921874 2.0685 0.256282 1.91227C0.420376 1.75603 0.642936 1.66825 0.875 1.66825H1.89875ZM9.625 6.66689C9.39294 6.66689 9.17038 6.75467 9.00628 6.9109C8.84219 7.06714 8.75 7.27905 8.75 7.5C8.75 7.72095 8.84219 7.93286 9.00628 8.08909C9.17038 8.24533 9.39294 8.33311 9.625 8.33311C9.85706 8.33311 10.0796 8.24533 10.2437 8.08909C10.4078 7.93286 10.5 7.72095 10.5 7.5C10.5 7.27905 10.4078 7.06714 10.2437 6.9109C10.0796 6.75467 9.85706 6.66689 9.625 6.66689ZM7.14875 6.66689C7.32953 6.17908 7.66477 5.75667 8.10827 5.45788C8.55178 5.15909 9.0817 4.99864 9.625 4.99864C10.1683 4.99864 10.6982 5.15909 11.1417 5.45788C11.5852 5.75667 11.9205 6.17908 12.1012 6.66689H13.125C13.3571 6.66689 13.5796 6.75467 13.7437 6.9109C13.9078 7.06714 14 7.27905 14 7.5C14 7.72095 13.9078 7.93286 13.7437 8.08909C13.5796 8.24533 13.3571 8.33311 13.125 8.33311H12.1012C11.9205 8.82092 11.5852 9.24333 11.1417 9.54212C10.6982 9.84091 10.1683 10.0014 9.625 10.0014C9.0817 10.0014 8.55178 9.84091 8.10827 9.54212C7.66477 9.24333 7.32953 8.82092 7.14875 8.33311H0.875C0.642936 8.33311 0.420376 8.24533 0.256282 8.08909C0.0921874 7.93286 0 7.72095 0 7.5C0 7.27905 0.0921874 7.06714 0.256282 6.9109C0.420376 6.75467 0.642936 6.66689 0.875 6.66689H7.14875ZM4.375 11.6655C4.14294 11.6655 3.92038 11.7533 3.75628 11.9095C3.59219 12.0658 3.5 12.2777 3.5 12.4986C3.5 12.7196 3.59219 12.9315 3.75628 13.0877C3.92038 13.244 4.14294 13.3317 4.375 13.3317C4.60706 13.3317 4.82962 13.244 4.99372 13.0877C5.15781 12.9315 5.25 12.7196 5.25 12.4986C5.25 12.2777 5.15781 12.0658 4.99372 11.9095C4.82962 11.7533 4.60706 11.6655 4.375 11.6655ZM1.89875 11.6655C2.07953 11.1777 2.41477 10.7553 2.85827 10.4565C3.30178 10.1577 3.8317 9.99728 4.375 9.99728C4.9183 9.99728 5.44822 10.1577 5.89173 10.4565C6.33523 10.7553 6.67047 11.1777 6.85125 11.6655H13.125C13.3571 11.6655 13.5796 11.7533 13.7437 11.9095C13.9078 12.0658 14 12.2777 14 12.4986C14 12.7196 13.9078 12.9315 13.7437 13.0877C13.5796 13.244 13.3571 13.3317 13.125 13.3317H6.85125C6.67047 13.8196 6.33523 14.242 5.89173 14.5408C5.44822 14.8395 4.9183 15 4.375 15C3.8317 15 3.30178 14.8395 2.85827 14.5408C2.41477 14.242 2.07953 13.8196 1.89875 13.3317H0.875C0.642936 13.3317 0.420376 13.244 0.256282 13.0877C0.0921874 12.9315 0 12.7196 0 12.4986C0 12.2777 0.0921874 12.0658 0.256282 11.9095C0.420376 11.7533 0.642936 11.6655 0.875 11.6655H1.89875Z" fill="#484848"/>
+                </svg>
+             
+            <span>Filter(0)</span>
+            <hr>
+            <span><b>Product Type +</b></span>
+            <hr>
+            <div class="expanded"> 
+           <span> <b>Price - </b></span>
+            <label class="filter-options">
+                Under $10
+                <input type="checkbox" class="squares">
+            </label> 
+            <label>
+                $10-$15
+                <input type="checkbox" class="squares">
+              </label> 
+              <label>
+                $15-$25
+                <input type="checkbox" class="squares">
+              </label>
+              <label>
+                $25+
+                <input type="checkbox" class="squares">
+              </label>
+            </div>
+            <hr>
+            <span><b>Age +</b></span>
+            <hr>
+            <span><b>Format +</b></span>
+            <hr>
+        </div>
+    </div>
+    <div class = right>
+        <div class="grid">
+            <a href="single-product-page.html">
+            <div class="book">
+                <img src="A3/wicked-king.jpg" alt="wicked-king">
+                <h4>The Wicked King</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+            </a>
+            <div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+            <div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div><div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div><div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+            <div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+            <div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+            <div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+            <div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div><div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+            <div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div><div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div><div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+            <div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+            <div class="book">
+                <img src="https://www.farrells.com.au/wp-content/uploads/2022/11/9781471407277.jpg" alt="The cruel prince">
+                <h4>The Cruel Prince</h4>
+                <h6>By Holly Black</h6>
+                <h4>$11.69</h4>
+                <a class="add-to-cart-button">
+                    <svg width="18" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66539 4.02443H19.363L16.5686 13.3389H4.45974L1.66539 4.02443ZM1.66539 4.02443L0.966797 1.6958M8.17809 8.68169H10.041M10.041 8.68169H11.9039M10.041 8.68169V6.81878M10.041 8.68169V10.5446M9.117 16.599C9.117 16.9696 8.9698 17.325 8.70777 17.587C8.44575 17.849 8.09038 17.9962 7.71982 17.9962C7.34927 17.9962 6.99389 17.849 6.73187 17.587C6.46985 17.325 6.32264 16.9696 6.32264 16.599M14.7057 16.599C14.7057 16.9696 14.5585 17.325 14.2965 17.587C14.0345 17.849 13.6791 17.9962 13.3085 17.9962C12.938 17.9962 12.5826 17.849 12.3206 17.587C12.0586 17.325 11.9114 16.9696 11.9114 16.599" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+        </div>  
+    </div>
+</section>
+
+    <!--footer-->
+           <div class="footer">  
+            <div class="footer-row" >
+                <div class="footer-column">
+                    <ul> 
+                        <li class="footer-list">About Us</li>
+                        <li class="footer-list"> Contact Us</li>
+                        <li class="footer-list"> Quick Help</li>
+                        <li class="footer-list"> Terms and Conditions</li>
+                        <li class="footer-list"> Shipping and Returns</li>
+                    </ul>
+                </div>
+                <div class="footer-column column2">
+                    <p>
+                        Follow Us
+                    </p>
+                
+                        <svg width="150" height="31" viewBox="0 0 249 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_0_1)">
+                            <path d="M2.63086 45.2673V8.33871C2.63086 7.44834 3.00322 6.59444 3.66604 5.96485C4.32885 5.33527 5.22782 4.98157 6.16518 4.98157H45.0428C45.9801 4.98157 46.8791 5.33527 47.5419 5.96485C48.2047 6.59444 48.5771 7.44834 48.5771 8.33871V45.2673C48.5771 46.1577 48.2047 47.0116 47.5419 47.6411C46.8791 48.2707 45.9801 48.6244 45.0428 48.6244H34.4398V32.7116H36.9492C37.5209 32.7116 38.0693 32.4958 38.4736 32.1118C38.878 31.7277 39.1051 31.2068 39.1051 30.6637V28.0787C39.1051 27.5356 38.878 27.0147 38.4736 26.6307C38.0693 26.2466 37.5209 26.0309 36.9492 26.0309H34.5812V22.8751C34.5812 20.0551 35.9242 20.0551 37.2672 20.0551H38.9991C39.2835 20.0663 39.5671 20.0179 39.8297 19.9135C40.0923 19.8091 40.3275 19.6511 40.5188 19.4509C40.7242 19.2651 40.8868 19.0409 40.9963 18.7924C41.1058 18.544 41.1599 18.2766 41.155 18.0073V15.523C41.1644 15.2496 41.1171 14.9772 41.0156 14.7212C40.9141 14.4652 40.7605 14.2308 40.5635 14.0312C40.3666 13.8317 40.1302 13.671 39.8678 13.5583C39.6054 13.4456 39.3222 13.3831 39.0344 13.3744H34.9699C33.784 13.3321 32.6025 13.5348 31.5071 13.9685C30.4116 14.4022 29.4284 15.0567 28.6252 15.8866C27.8221 16.7165 27.2181 17.7022 26.8552 18.7754C26.4922 19.8487 26.3788 20.984 26.5229 22.103V26.0309H24.2609C23.9748 26.0264 23.6907 26.0761 23.425 26.177C23.1594 26.2779 22.9175 26.4281 22.7136 26.6187C22.5096 26.8093 22.3476 27.0365 22.2371 27.2872C22.1265 27.5379 22.0696 27.8069 22.0696 28.0787V30.6637C22.0696 30.9355 22.1265 31.2046 22.2371 31.4552C22.3476 31.7059 22.5096 31.9332 22.7136 32.1238C22.9175 32.3144 23.1594 32.4645 23.425 32.5654C23.6907 32.6663 23.9748 32.716 24.2609 32.7116H26.5229V48.6244H6.16518C5.22782 48.6244 4.32885 48.2707 3.66604 47.6411C3.00322 47.0116 2.63086 46.1577 2.63086 45.2673Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <path d="M79.4756 34.8601C76.9518 36.743 74.0551 38.1245 70.9578 38.9223C70.6167 39.0399 70.3219 39.2544 70.1136 39.5367C69.9053 39.819 69.7936 40.1554 69.7936 40.5001C69.7936 40.8449 69.9053 41.1812 70.1136 41.4635C70.3219 41.7458 70.6167 41.9604 70.9578 42.078C95.4154 51.6123 110.966 36.8744 108.598 20.5251L112.557 12.7366H107.962C102.237 6.05584 87.039 6.39156 89.5484 20.6258C89.5484 20.6258 81.4194 22.0023 71.0285 12.3001C70.7882 12.0747 70.4848 11.9195 70.1544 11.8527C69.8241 11.786 69.4805 11.8107 69.1643 11.9237C68.8482 12.0367 68.5729 12.2335 68.3708 12.4906C68.1688 12.7477 68.0485 13.0544 68.0243 13.3744C66.9256 17.6643 67.4755 22.1859 69.5749 26.1249C71.6742 30.064 75.1852 33.1616 79.4756 34.8601Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M153.804 16.4773C151.802 16.4773 149.845 17.0412 148.181 18.0975C146.517 19.1539 145.219 20.6553 144.453 22.412C143.687 24.1686 143.487 26.1016 143.877 27.9665C144.268 29.8313 145.232 31.5443 146.647 32.8888C148.063 34.2333 149.866 35.1489 151.829 35.5199C153.793 35.8908 155.828 35.7004 157.677 34.9728C159.526 34.2452 161.107 33.013 162.219 31.432C163.331 29.8511 163.925 27.9924 163.925 26.091C163.922 23.5421 162.855 21.0984 160.957 19.296C159.06 17.4937 156.487 16.48 153.804 16.4773ZM153.804 32.5C152.469 32.5 151.165 32.1242 150.055 31.4199C148.946 30.7157 148.081 29.7147 147.57 28.5436C147.059 27.3725 146.926 26.0838 147.186 24.8406C147.447 23.5974 148.089 22.4554 149.033 21.559C149.976 20.6627 151.179 20.0523 152.488 19.805C153.796 19.5577 155.153 19.6846 156.386 20.1697C157.619 20.6548 158.673 21.4763 159.414 22.5303C160.156 23.5842 160.551 24.8234 160.551 26.091C160.551 27.7908 159.84 29.4209 158.575 30.6229C157.31 31.8248 155.593 32.5 153.804 32.5ZM163.925 5.26141H143.683C140.552 5.26459 137.551 6.44729 135.337 8.54999C133.123 10.6527 131.878 13.5037 131.875 16.4773V35.7046C131.878 38.6783 133.123 41.5292 135.337 43.6319C137.551 45.7346 140.552 46.9173 143.683 46.9205H163.925C167.056 46.9173 170.057 45.7346 172.271 43.6319C174.484 41.5292 175.729 38.6783 175.733 35.7046V16.4773C175.729 13.5037 174.484 10.6527 172.271 8.54999C170.057 6.44729 167.056 5.26459 163.925 5.26141ZM172.359 35.7046C172.359 37.8293 171.47 39.8671 169.889 41.3695C168.307 42.8719 166.162 43.716 163.925 43.716H143.683C141.446 43.716 139.301 42.8719 137.719 41.3695C136.137 39.8671 135.249 37.8293 135.249 35.7046V16.4773C135.249 14.3526 136.137 12.3149 137.719 10.8124C139.301 9.31001 141.446 8.46596 143.683 8.46596H163.925C166.162 8.46596 168.307 9.31001 169.889 10.8124C171.47 12.3149 172.359 14.3526 172.359 16.4773V35.7046ZM167.299 15.6762C167.299 16.1515 167.15 16.6162 166.872 17.0114C166.594 17.4067 166.199 17.7147 165.737 17.8966C165.274 18.0786 164.766 18.1262 164.275 18.0334C163.784 17.9407 163.333 17.7118 162.979 17.3757C162.625 17.0395 162.384 16.6113 162.287 16.1451C162.189 15.6789 162.239 15.1956 162.431 14.7564C162.622 14.3173 162.946 13.9419 163.363 13.6778C163.779 13.4137 164.268 13.2728 164.768 13.2728C165.439 13.2728 166.083 13.526 166.557 13.9767C167.032 14.4274 167.299 15.0388 167.299 15.6762Z" fill="#D4D4D4"/>
+                            <path d="M241.707 15.8986C239.098 15.896 236.597 14.9104 234.752 13.1582C232.907 11.4059 231.87 9.03005 231.867 6.55197C231.867 6.13882 231.694 5.7426 231.387 5.45046C231.079 5.15832 230.662 4.9942 230.227 4.9942H222.027C221.592 4.9942 221.175 5.15832 220.867 5.45046C220.56 5.7426 220.387 6.13882 220.387 6.55197V32.2551C220.387 32.952 220.19 33.636 219.816 34.2358C219.443 34.8356 218.906 35.3293 218.264 35.6652C217.621 36.0012 216.895 36.1672 216.162 36.1459C215.428 36.1246 214.715 35.9168 214.095 35.5441C213.475 35.1715 212.971 34.6476 212.637 34.0273C212.303 33.4069 212.15 32.7127 212.195 32.0171C212.239 31.3215 212.479 30.65 212.89 30.0726C213.301 29.4952 213.867 29.0332 214.53 28.7345C214.811 28.6081 215.048 28.4087 215.213 28.1595C215.379 27.9103 215.467 27.6215 215.467 27.3267V19.0141C215.467 18.7864 215.415 18.5614 215.313 18.355C215.212 18.1487 215.064 17.9659 214.881 17.8196C214.697 17.6733 214.482 17.5671 214.25 17.5084C214.019 17.4496 213.776 17.4398 213.54 17.4797C206.224 18.7181 200.707 25.0699 200.707 32.2551C200.707 36.18 202.349 39.9441 205.27 42.7194C208.192 45.4947 212.155 47.0539 216.287 47.0539C220.419 47.0539 224.382 45.4947 227.304 42.7194C230.225 39.9441 231.867 36.18 231.867 32.2551V24.5227C234.904 26.028 238.281 26.8105 241.707 26.8029C242.142 26.8029 242.559 26.6388 242.866 26.3467C243.174 26.0545 243.347 25.6583 243.347 25.2451V17.4563C243.347 17.0432 243.174 16.647 242.866 16.3548C242.559 16.0627 242.142 15.8986 241.707 15.8986ZM240.067 23.6173C236.862 23.3475 233.793 22.2611 231.184 20.4725C230.939 20.3051 230.65 20.2052 230.349 20.1839C230.048 20.1626 229.746 20.2207 229.477 20.3518C229.209 20.4829 228.984 20.6819 228.826 20.9269C228.669 21.1719 228.586 21.4533 228.587 21.7402V32.2551C228.587 35.3537 227.291 38.3254 224.984 40.5164C222.678 42.7074 219.549 43.9383 216.287 43.9383C213.025 43.9383 209.896 42.7074 207.59 40.5164C205.283 38.3254 203.987 35.3537 203.987 32.2551C203.987 27.2118 207.398 22.6885 212.187 21.0392V26.4271C211.127 27.0999 210.268 28.0222 209.695 29.104C209.122 30.1857 208.853 31.3901 208.916 32.5998C208.979 33.8094 209.37 34.983 210.052 36.0062C210.734 37.0293 211.684 37.8672 212.808 38.4381C213.933 39.0089 215.194 39.2933 216.469 39.2635C217.743 39.2338 218.988 38.8908 220.082 38.2681C221.175 37.6454 222.08 36.7642 222.709 35.7104C223.337 34.6566 223.667 33.4662 223.667 32.2551V8.10973H228.689C229.058 10.8535 230.376 13.4034 232.435 15.3592C234.494 17.3151 237.178 18.5664 240.067 18.9167V23.6173Z" fill="#D4D4D4"/>
+                            <defs>
+                            <clipPath id="clip0_0_1">
+                            <rect width="49.4805" height="47" fill="white" transform="translate(0.86377 3.30298)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            <p class="copyright">Copyright © 2000-2021 | All Rights Reserved </p>
+                            
+                        
+                </div>
+                <hr>
+                <div class="footer-column">
+                    <div class="footer-form">
+                        <p class="footer-text">Find Store</p>
+                        <input class="footer-button" placeholder="Location or ZIP code">
+                    </div>
+                    <div class="footer-form">
+                        <p class="footer-text">Sign Up for New and Savings</p>
+                        <input class="footer-button" placeholder="Email Address">
+                    </div>        
+
+                </div>
+                    
+                </div>
+            </div> 
+
+</body>
+</html>

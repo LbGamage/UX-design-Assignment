@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Form</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script src="JS-Folder/info-form.js"></script>
+</head>
+<body>
+        <!--header bar that was edited for the forms-->
+    <div class="header-bar">
+        <a href="Homepage.html" class="home-link">
+            <div class="logo-content"> 
+                <img src="A3/Logo.png" alt="Logo" class="logo">
+                <p class="bookshop" id="bookshop-home">Robinson's Bookshop</p>
+            </div>
+            </a>
+    </div>    
+
+        <!--similar to the info-form split into two columns, uses the same layout-->
+    <div class="main-checkout">
+        <div class="order-dropdown" onclick="orderSummary()">
+            <p>Order Summary</p>
+            <img src="A3/down-arrow.png" alt="down-arrow" class=order-arrow>
+        </div>
+        <!--order summary container, the same as the other forms-->
+        <div class="column-form c-items" id="orderSummary">
+            <div class="order-container">
+                <div class="order-items">
+                    <!--row-item contains the product and it's info and is organized as rows-->
+                <div class="row-item">
+                    <img src="A3/wicked-king.jpg" alt="" class="bookorder-img">
+                    <div class="order-content">
+                        <span class="order-name"> The Wicked King (Folk of Air Series #2)</span>
+                        <span class="order-author">Holly Black</span>
+                        <span class="order-price"><b>$11.69</b></span>
+                    </div>
+                </div>
+                </div>
+                <div class="order-items">
+                <div class="row-item">
+                    <img src="A3/wicked-king.jpg" alt="" class="bookorder-img">
+                    <div class="order-content">
+                        <span class="order-name"> The Wicked King (Folk of Air Series #2)</span>
+                        <span class="order-author">Holly Black</span>
+                        <span class="order-price"><b>$11.69</b></span>
+                    </div>
+                </div>
+                </div>
+            <div class="row-item subtot">
+                <p class="sub-total">Sub Total</p>
+                <p class="sub-pricing"><b>$11.69</b></p>
+            </div>
+            <div class="row-item ship">
+                <p> Shipping</p>
+                <p class="shipping-price"><b>Calculated at next step</b></p>
+            </div>
+            <div class="total-tax">
+            <div class="row-item tot">
+               <p class="total"><b>Total</b></p>
+               <p class="total-price"><b>$11.69</b></p>
+            </div>
+            <div class="row-item taxes">
+                <p class="tax">Including tax (GST 10%)</p>
+            </div>
+            </div>
+            <!--gift card input-->
+            <p class="gift-card"> <b>Gift Card or Discount Coupon</b></p>
+            <div class="row-item coupon">
+                <input type="text" placeholder="Gift Card or Discount Coupon" class="coupon-input">
+                <button class="coupon-button"><img src="A3/right-arrow.png" alt="right-arrow" class="coupon-arrow"></button> <!--Arrow img-->
+            </div>
+            <div class="row-item return">
+                <img src="A3/right-arrow.png" alt="right-arrow" class="return-arrow"> <!--arrow-->
+                <p class="return-text">Return to Cart</p>
+            </div>
+            <!--form footer-->
+            <hr class="foot-divider">
+            <div class="row-item order-footer">
+                <ul class="nav-order">
+                    <li class="order-nav-con"><u>Refund Policy</u></li>
+                    <li class="order-nav-con"><u>Shipping Policy</u></li>
+                    <li class="order-nav-con"><u>Term of Service</u></li>
+                </ul>
+            </div>
+            </div>
+            </div>
+            
+        <!--shipping form side column-->
+        <div class="column-form form1">
+            <div class="payment-content">
+                <div class="navigation">
+                    <p class="past"><a href="Cart.html"> Cart</a></p>
+                    <img src="A3/right-arrow.png" alt="right-arrow" class="nav-arrow">                     
+                    <p class="past"> <a href="information.html">Information</a> </p>
+                    <img src="A3/right-arrow.png" alt="right-arrow" class="nav-arrow">                     
+                    <p class="nav-location"><b>Shipping></b></p>
+                    <img src="A3/right-arrow.png" alt="right-arrow" class="nav-arrow">                     
+                    <p class="future">Payment</p>
+                </div>
+                <form id="form2">
+                    <!--past information entered into forms, not functional to store data-->
+                <div class="form-body">
+                        <div class="past-info">
+                            <div class="contact">
+                                <span class="pastinfo-title">Contact</span>                                
+                                <button class="change">change</button>
+                            </div> 
+                            <span class="contact-details">name@gmail.com</span>   
+                            <hr class="form-div">
+                            <div class="contact">
+                                <span class="pastinfo-title">Ship To</span>
+                                <button class="change">change</button>
+                            </div> 
+                            <span class="contact-details">University of Melbourne, Parkvile...</span>
+                         </div>
+                </div>
+                <br>
+                <hr>
+
+                <div class="form-heading">
+                    <h3 class="shipping-address"> Shipping Method</h3> 
+                    <br>
+                </div>                    
+                    <div class="form-body">
+                            <div class="past-info">
+                                <!--reuses forms fron payment form, Shipping options -->
+                                    <input type="radio" class="ship-type" name="radio2" checked="checked">
+                                    <label for="radio" class="shipping-label">Click & Collect</label>
+                                    <div class="shippding-option">
+                                    <span class="shipping-details">Choose Store Location Below</span>
+                                    </div>
+                                <!--divided via hr lines-->    
+                                <hr class="form-div">
+                                <input type="radio" class="ship-type" name="radio2">
+                                    <label for="radio" class="shipping-label">Standard Shipping</label>
+                                    <div class="shippding-option">
+                                    <span class="shipping-details">1-7 days</span>
+                                    </div>
+                                <hr class="form-div">
+                                <input type="radio" class="ship-type" name="radio2" >
+                                    <label for="radio" class="shipping-label">Express Shipping</label>
+                                    <div class="shippding-option">
+                                    <span class="shipping-details">1-3 days</span>
+                                    </div>
+                            </div>
+                    </div>
+                    <!--drop down input bar to enter store location-->
+                    <div class="input-row">
+                    <div class="form-inputbox shop-location">
+                        <small>Error message</small>
+                        <div class="formname-bg">
+                        <label class="form-names">Store Location</label>
+                        </div>
+                        <select id="store" name="store" class="dropdown store">
+                            <option value="Frankston">Frankston</option>
+                            <option value="Fountain Gate">Fountain Gate</option>
+                            <option value="NT">NT</option>
+                            <option value="The Glen">The Glen</option>
+                          </select>
+                    </div>
+                    </div>
+                </form>
+                <div class="input-row continue-button">
+                    <!--form submit button-->
+                    <a href="payment-form.html" class="pay">
+                    <button class="continue" id="ship-button"> Continue to Payment</button>
+                    </a>
+                </div>
+            </div>   
+        </div>
+    
+    
+
+  
+</div>
+        
+    
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script defer src="JS-Folder/payment-form.js"></script>
+</head>
+<body>
+    <!--header bar that was edited for the forms-->
+    <div class="header-bar">
+        <a href="Homepage.html" class="home-link">
+            <div class="logo-content" i> 
+                <img src="A3/Logo.png" alt="Logo" class="logo">
+                <p class="bookshop" id="bookshop-home">Robinson's Bookshop</p>
+            </div>
+        </a>
+    </div>    
+    
+    <!--similar to the info-form split into two columns, uses the same layout-->
+    <div class="main-checkout">
+        <!--order header-->
+        <div class="order-dropdown" onclick="orderSummary()">
+            <p>Order Summary</p>
+            <img src="A3/down-arrow.png" alt="down-arrow" class=order-arrow>
+        </div>
+        <!--order summary container, the same as the other forms-->
+        <div class="column-form c-items" id="orderSummary">
+            <div class="order-container">
+                <div class="order-items">
+                <div class="row-item">
+                    <img src="A3/wicked-king.jpg" alt="" class="bookorder-img">
+                    <div class="order-content">
+                        <span class="order-name"> The Wicked King (Folk of Air Series #2)</span>
+                        <span class="order-author">Holly Black</span>
+                        <span class="order-price"><b>$11.69</b></span>
+                    </div>
+                </div>
+                </div>
+                <div class="order-items">
+                <div class="row-item">
+                    <img src="A3/wicked-king.jpg" alt="" class="bookorder-img">
+                    <div class="order-content">
+                        <span class="order-name"> The Wicked King (Folk of Air Series #2)</span>
+                        <span class="order-author">Holly Black</span>
+                        <span class="order-price"><b>$11.69</b></span>
+                    </div>
+                </div>
+                </div>
+
+            <!--price and total information-->
+            <div class="row-item subtot">
+                <p class="sub-total">Sub Total</p>
+                <p class="sub-pricing"><b>$11.69</b></p>
+            </div>
+            <div class="row-item ship">
+                <p> Shipping</p>
+                <p class="shipping-price"><b>Calculated at next step</b></p>
+            </div>
+            <div class="total-tax">
+            <div class="row-item tot">
+               <p class="total"><b>Total</b></p>
+               <p class="total-price"><b>$11.69</b></p>
+            </div>
+            <div class="row-item taxes">
+                <p class="tax">Including tax (GST 10%)</p>
+            </div>
+            </div>
+            <!--gift card input-->
+            <p class="gift-card"> <b>Gift Card or Discount Coupon</b></p>
+            <div class="row-item coupon">
+                <input type="text" placeholder="Gift Card or Discount Coupon" class="coupon-input">
+                <button class="coupon-button"><img src="A3/right-arrow.png" alt="right-arrow" class="coupon-arrow"></button> <!--Arrow img-->
+            </div>
+            <div class="row-item return">
+                <img src="A3/right-arrow.png" alt="right-arrow" class="return-arrow"> <!--arrow-->
+                <p class="return-text">Return to Cart</p>
+            </div>
+            <!--form footer-->
+            <hr class="foot-divider">
+                <div class="row-item order-footer">
+                    <ul class="nav-order">
+                        <li class="order-nav-con"><u>Refund Policy</u></li>
+                        <li class="order-nav-con"><u>Shipping Policy</u></li>
+                        <li class="order-nav-con"><u>Term of Service</u></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="column-form form1">
+            <!--form navigation which shows you what form you are on-->
+            <div class="payment-content">
+                <div class="navigation">
+                    <p class="past"><a href="Cart.html"> Cart</a></p>
+                    <img src="A3/right-arrow.png" alt="right-arrow" class="nav-arrow">                     
+                    <p class="past"> <a href="information.html">Information</a> </p>
+                    <img src="A3/right-arrow.png" alt="right-arrow" class="nav-arrow">                     
+                    <p class="past"> <a href="Shipping-form.html">Shipping</a></p>
+                    <img src="A3/right-arrow.png" alt="right-arrow" class="nav-arrow">                     
+                    <p class="nav-location"> <b>Payment</b></p>
+            </div>
+
+                <!--payment form-->
+            <form id="form2">
+                <div class="form-body">
+                    <div class="main-form">
+
+                        <!--shows the information you entered in the past forms-->
+                        <div class="past-info">
+                            <div class="contact">
+                                <span class="pastinfo-title">Contact</span>                                
+                                <button class="change">change</button>
+                            </div> 
+                            <span class="contact-details">name@gmail.com</span>   
+                            <hr class="form-div">
+                            <div class="contact">
+                                <span class="pastinfo-title">Ship To</span>
+                                <button class="change">change</button>
+                            </div> 
+                            <span class="contact-details">University of Melbourne, Parkvile...</span>
+                            <hr class="form-div">
+                            <div class="contact">
+                                <span class="pastinfo-title">Delivery Method</span>
+                                <button class="change">change</button>
+                            </div> 
+                            <span class="contact-details">Click & Collect (Frankston)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-heading">
+                    <h3 class="shipping-address"> Payment</h3> 
+                    <br>
+                </div>
+                
+                <div class="form-body">
+                    <!--form body: only takes credit, paypal and after pay aren't functional-->
+                    <div class="main-form payment-form">
+                        <div class="pay-type">
+                        <div class="payment-title">
+                            <input type="radio" class="payment-type" name="radio" checked="checked">
+                            <label for="radio" class="payment-label">Credit Card</label>
+                        </div>
+                        <div class="credit-img">
+                            <img src="a3/credit.png" alt="credit" class="credit-img">
+                        </div>
+                    </div>
+                    <!--credit details, organized via flex-->
+                        <div class="credit-details">
+                            <div class="input-row">
+                                <div class="form-inputbox"> 
+                                    <!--card number verification partially done using max length-->
+                                    <input type="text" class="text-box cardnumber" placeholder="Card Number" id="card-number" maxlength="12">
+                                    <small class="pay-error">Error message</small>
+                                </div>
+                            </div>  
+                            <div class="input-row  cardname">
+                                <div class="form-inputbox">   
+                                    <input type="text" class="text-box" placeholder="Name on Card" id="card-name">
+                                    <small class="pay-error">Error message</small> 
+
+                                </div>
+                            </div> 
+                            <div class="input-row">
+                                <div class="form-inputbox">
+                                    <div class="formname-bg">
+                                    <label class="credit-name">Expiry Date</label>
+                                    </div>
+                                    <input type="month" class="text-box expiry"  id="expiry-date">
+                                    <small class="pay-error">Error message</small> 
+                                </div>
+                                <div class="form-inputbox  cvcnum">
+                                    <div class="formname-bg">
+                                    <label class="credit-name">CVC</label>
+                                    </div>
+                                    <!--partial verification of CVC done using max length-->
+                                    <input type="number" placeholder=" " class="text-box" id="cvc" maxlength="3">
+                                    <small class="pay-error">Error message</small> 
+                                </div>
+                            </div>       
+
+                        </div>
+                        
+                        <div class="pay-type">
+                            <div class="payment-title">
+                                <input type="radio" class="payment-type" name="radio" >
+                                <label for="radio" class="payment-label">PayPal</label>
+                            </div>
+                            <div class="credit-img">
+                                <img src="a3/payp.png" alt="payp" class="credit-img">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="afterpay">
+                            <div class="payment-title">
+                                <input type="radio" class="payment-type" name="radio">
+                                <label for="radio" class="payment-label">After Pay</label>
+                            </div>
+                            <div class="credit-img">
+                                <img src="a3/after-pay.png" alt="after-pay" class="credit-img">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--billing address form-->
+                <div class="form-heading billing-form">
+                    <h3 class="shipping-address"> Billing Address</h3> 
+                    <span class="billing-notice">Select address that matches your card or payment method</span>
+
+                </div>
+                    <!--form body, only has the same as shipping address function sadly-->
+                <div class="form-body form3">
+                    <div class="main-form">
+                        <div class="past-info">
+                            <div class="payment-title">
+                                <!--uses radio button-->
+                                <input type="radio" class="payment-type" name="radio2" checked="checked">
+                                <label for="radio" class="payment-label">Same as Shipping Address</label>
+                            </div>
+                            <hr class="form-div">
+                            <div class="payment-title">
+                                <input type="radio" class="payment-type" name="radio2">
+                                <label for="radio" class="payment-label">Use Different Address</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--form submit button-->
+                <div class="input-row continue-button">
+                    <button type="submit" class="continue" id="ship-button"> Pay Now</button>
+                </div>
+            </form>
+            </div>   
+        </div>
+    </div>
+</body>
+</html>

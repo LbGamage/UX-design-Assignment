@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Form</title>
+    <link rel="stylesheet" href="homepage.css">
+    <script defer src="JS-Folder/info-form.js"></script>
+</head>
+<body>
+    <!--edited header withoung the search, cart and menu functions for the forms-->
+    <div class="header-bar">
+        <a href="Homepage.html" class="home-link">
+            <div class="logo-content"> 
+                <img src="A3/Logo.png" alt="Logo" class="logo">
+                <p class="bookshop" id="bookshop-home">Robinson's Bookshop</p>
+            </div>
+         </a>
+    </div>    
+    
+    <!--main checkout split into two columns-->
+    <div class="main-checkout">
+        <!--order header-->
+        <div class="order-dropdown" onclick="orderSummary()">
+            <p>Order Summary</p>
+            <!--when screen size is small arrow will appear-->
+            <img src="A3/down-arrow.png" alt="down-arrow" class=order-arrow>
+        </div>
+        <div class="column-form c-items" id="orderSummary">
+            <div class="order-container">
+                <!--div contains information about the item-->
+                <div class="order-items">
+                <div class="row-item">
+                    <img src="A3/wicked-king.jpg" alt="" class="bookorder-img">
+                    <div class="order-content">
+                        <span class="order-name"> The Wicked King (Folk of Air Series #2)</span>
+                        <span class="order-author">Holly Black</span>
+                        <span class="order-price"><b>$11.69</b></span>
+                    </div>
+                </div>
+                </div>
+                <div class="order-items">
+                <div class="row-item">
+                    <img src="A3/wicked-king.jpg" alt="" class="bookorder-img">
+                    <div class="order-content">
+                        <span class="order-name"> The Wicked King (Folk of Air Series #2)</span>
+                        <span class="order-author">Holly Black</span>
+                        <span class="order-price"><b>$11.69</b></span>
+                    </div>
+                </div>
+                </div>
+            <div class="row-item subtot">
+                <p class="sub-total">Sub Total</p>
+                <p class="sub-pricing"><b>$11.69</b></p>
+            </div>
+            <div class="row-item ship">
+                <p> Shipping</p>
+                <p class="shipping-price"><b>Calculated at next step</b></p>
+            </div>
+            <div class="total-tax">
+            <div class="row-item tot">
+               <p class="total"><b>Total</b></p>
+               <p class="total-price"><b>$11.69</b></p>
+            </div>
+            <div class="row-item taxes">
+                <p class="tax">Including tax (GST 10%)</p>
+            </div>
+            </div>
+            
+            <!--gift card-->
+                <p class="gift-card"> <b>Gift Card or Discount Coupon</b></p>
+            <div class="row-item coupon">
+                <input type="text" placeholder="Gift Card or Discount Coupon" class="coupon-input">
+                <button class="coupon-button"><img src="A3/right-arrow.png" alt="right-arrow" class="coupon-arrow"></button> <!--Arrow img-->
+            </div>
+            <div class="row-item return">
+                <img src="A3/right-arrow.png" alt="right-arrow" class="return-arrow"> <!--arrow-->
+                <p class="return-text">Return to Cart</p>
+            </div>
+            <hr class="foot-divider">
+
+            <!--order summary footer-->
+            <div class="row-item order-footer">
+                
+                <ul class="nav-order">
+                    <li class="order-nav-con"><u>Refund Policy</u></li>
+                    <li class="order-nav-con"><u>Shipping Policy</u></li>
+                    <li class="order-nav-con"><u>Term of Service</u></li>
+                </ul>
+            </div>
+            </div>
+            </div>
+
+            <!--information form and other functions such as login and sign up-->
+    <div class="column-form form1">
+        <div class="payment-content">
+            <!--top navigation that shows the flow of the forms, links are functional-->
+            <div class="navigation">
+                <p class="past"><a href="Cart.html"> Cart</a></p>
+                <img src="A3/right-arrow.png" alt="right-arrow" class="nav-arrow">                     
+                <p class="nav-location"> <b>Information</b></p>
+                <img src="A3/right-arrow.png" alt="right-arrow" class="nav-arrow">                     
+                <p class="future"> Shipping</p>
+                <img src="A3/right-arrow.png" alt="right-arrow" class="nav-arrow">                     
+                <p class="future"> Payment</p>
+            </div>
+            <!--login, join or continue as guest-->
+            <div class="join">
+                <button class="login">Login</button>
+                <p class="future">Not a member?</p>
+                <button class="sign-up">Sign Up</button>
+                <p class="future"> OR</p>
+                <p class="nav-location">Continue as Guest</p>
+                <span class="seperator"></span>
+                
+            </div>
+
+            <div class="express">
+                <p class="future"> Express Checkout</p>
+                <button class="ppbutton"><img src="A3/payapl.png" alt="payapl" class="paypal"></button>
+               <span class="strikethrough">OR</span>
+            </div>
+
+            <!--form start-->
+            <div class="form-heading">
+                <h3 class="shipping-address"> Shipping Address</h3> 
+                <br>
+            </div>
+            
+            <!--form body, uses flex properties to be organzied-->
+            <div class="form-body">
+                <form action=""  class="main-form" id="main-form" onsubmit="return validateForm()">
+                    <div class="input-row">
+                        <div class="form-inputbox"> 
+                             <!--error messages which appear after verification-->
+                            <small>Error message</small>
+                            <div class="formname-bg">  
+                            <label class="form-names">First Name</label>
+                            </div> 
+                            <input type="text" class="name" id="first-name" name="first-name">
+                        </div>
+                        <div class="form-inputbox">
+                            <small>Error message</small>
+                            <div class="formname-bg">
+                            <label class="form-names">Last Name</label>
+                            </div>
+                            <input type="text" class="name" id="last-name">
+                        </div>          
+
+                    </div>
+                    <div class="input-row email-column">
+                        <div class="form-inputbox">
+                            <small>Error message</small>
+                            <div class="formname-bg">
+                            <label class="form-names">Email Address</label>
+                            </div>
+                            <input type="email" class="emailbox" id="email">
+                        </div>
+                        <div class="subscription">
+                            <input type="checkbox" class="checkbox" name="checkbox" value="yes">
+                            <label for="checkbox" class="email-label">Email me with news and offers</label>
+                        </div>
+                    </div>
+                      
+
+                    <div class="input-row address-column">
+
+                        <div class="form-inputbox">
+                            <small>Error message</small>
+                            <div class="formname-bg">
+                            <label class="form-names">Address</label>
+                            </div>
+                            <input type="text" class="address" id="address">
+                            
+                        </div>
+                        <div class="form-inputbox">
+                            <input type="text" placeholder="Apartment, Suite, etc. (optional)" class="address2">
+                        </div>
+                    </div>
+                    <!--container three different inputs in one row-->
+                    <div class="input-row add-details">
+                        <div class="form-inputbox">
+                            <small>Error message</small>
+                            <div class="formname-bg">
+                            <label class="form-names">City</label>
+                            </div>
+                            <input type="text" id="city">
+                        </div>
+                        <div class="form-inputbox">
+                            <small>Error message</small>
+                            <div class="formname-bg">
+                            <label class="form-names">Postcode</label>
+                            </div>
+                            <input type="number" placeholder=" "  id="postcode">
+                        </div>
+                        <div class="form-inputbox">
+                            <small>Error message</small>
+                            <div class="formname-bg">
+                            <label class="form-names">State/Territory</label>
+                            </div>
+                            <!--drop down input-->
+                            <select id="state" name="state" class="dropdown">
+                                <option value="--"> </option>
+                                <option value="VIC">VIC</option>
+                                <option value="QLD">QLD</option>
+                                <option value="NT">NT</option>
+                                <option value="TAS">TAS</option>
+                                <option value="NSW">NSW</option>
+                                <option value="ACT">ACT</option>
+                                <option value="WA">WA</option>
+                                <option value="SA">SA</option>
+                              </select>
+                            
+                        </div>
+                    </div>
+
+                    <div class="input-row add-details">
+                        <div class="form-inputbox">
+                            <small>Error message</small>
+                            <input type="tel" placeholder="Phone Number (optional)" class="phonenumber" id="phone-number" maxlength="10">
+                        </div>
+                    </div>
+
+                    <!--submision button-->
+                    <div class="input-row continue-button">
+                        <button type="submit" class="continue ">Continue to Shipping</button>
+                    </div>
+
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
